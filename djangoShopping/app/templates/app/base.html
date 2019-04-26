@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'app/app.css' %}"/>
+    <title>Django Shopping by Xavier</title>
+</head>
+<body>
+<section>
+    <nav>
+        <a href="{% url 'HomeView' %}">Xpress</a>
+        <br>
+        <a href="{% url 'FootwearView' %}">Footwear</a>
+        <br>
+    </nav>
+</section>
+{% block content %}{% endblock %}
+{% block product-view %}{% endblock %}
+</body>
+</html>

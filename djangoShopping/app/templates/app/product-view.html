@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+
+{% block product-view %}
+<section>
+    <h2>{{ title }}</h2>
+    <div>
+        {% if items %}
+        {% for item in items %}
+        <div>
+            <p><strong>{{ item.name }}</strong></p>
+            <p><strong>{{ item.price }}</strong></p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div>
+            <h4>NO ITEMS</h4>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
